@@ -1,0 +1,20 @@
+<a [routerLink]="['/vehicles']" class="btn btn-primary">Go Back</a>
+
+ <table>
+  <thead>
+  <tr><th>Vin</th>
+    <th>reason</th>
+    <th>priority</th></tr>
+  </thead>
+  <tbody >
+  <ng-container *ngFor="let alerts of alrts">
+    <!--<tr *ngIf="alerts.vin == ''">
+      -->
+    <tr>
+      <td>{{alerts.vin}}</td>
+  <td>{{alerts.reason}}</td>
+  <td>{{alerts.prority}}</td>
+    </tr></ng-container>
+  </tbody>
+</table>
+

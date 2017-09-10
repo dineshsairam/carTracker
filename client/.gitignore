@@ -1,0 +1,8 @@
+build
+dist
+api
+node_modules
+*.class
+.settings
+.metadata
+.idea

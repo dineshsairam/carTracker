@@ -1,0 +1,22 @@
+<section class="container">
+
+  <header>
+    <h1 style="text-align: center">Car Tracker </h1>
+  </header>
+  <hr>
+  <nav class="navbar navbar-light" style="background-color: #222222">
+
+    <a [routerLink]="['/vehicles']" class="flex-sm-fill text-sm-center nav-link">Vehicles</a>
+    <a [routerLink]="['/alerts']" class="flex-sm-fill text-sm-center nav-link">Alerts By priority</a>
+    <a [routerLink]="['/alertplot']"  class="flex-sm-fill text-sm-center nav-link">Vehicles History(MultiSort)</a>
+    <a [routerLink]="['/alertbytime']"  class="flex-sm-fill text-sm-center nav-link">LatestHighAlerts</a>
+    <a [routerLink]="['/location']" class="flex-sm-fill text-sm-center nav-link">LocationTrack</a>
+
+  </nav>
+  <hr>
+  <router-outlet></router-outlet>
+  <hr>
+  <footer>
+   <pre> &copy; 2017 Registered-Dinesh Ram Evana</pre>
+  </footer>
+</section>
