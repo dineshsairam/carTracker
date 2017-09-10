@@ -1,0 +1,36 @@
+
+<h4>sort by priority to view : </h4>
+<select [(ngModel)]= "sele" #selec>
+  <option value="HIGH">high</option>
+  <option value="MEDIUM">medium</option>
+  <option value="LOW">low</option>
+</select>
+<h4>Type in your vehicle (VIN) number to search for alerts:</h4>
+<input type="text" class="form-control" #name1 (keyup)="0" placeholder="VIN number">
+<br>
+
+
+<!--<p>{{selec.value}}</p>-->
+<!--<p>{{sele}}</p>-->
+<!--<button type="submit" (click)="fun1(name.value)">search</button>-->
+<table class="table table-striped table-inverse">
+  <thead>
+  <tr>
+    <th>vin</th>
+    <th>Reason</th>
+    <th>priority</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <ng-container *ngFor="let alert of (alerts | searchFilter : name1.value )">
+    <tr *ngIf= "alert.prority == [selec.value] ">
+
+    <td>{{alert.vin}}</td>
+    <td>{{alert.reason}}</td>
+    <td>{{alert.prority}}</td>
+
+  </tr>
+  </ng-container>
+  </tbody>
+</table>
